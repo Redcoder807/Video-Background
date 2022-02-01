@@ -1,0 +1,97 @@
+/* Importing/Linking the Nunito Google Font  */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* "box-sizing: border-box;z" includes padding and border when setting a width or height */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+a {
+    /* Removes the underline on a link */
+    text-decoration: none;
+    color: darkred;
+}
+
+#main {
+    /* VH (Viewport Height) determines the height of an element by setting it to a percentage of the viewport (NOTE: VW is used for width) */
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* So the text does NOT go up against the left and right edges on smaller screen sizes */
+    padding: 0 20px;
+
+    /* Setting "position: relative;" here so #video-container div will positioned relative to this element instead of the Root (AKA HTML) element */
+    position: relative;
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("cover.png");
+    background-position: center;
+    background-size: cover;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#content {
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+#click {
+    /* Inline-Block allows you to set top and bottom margin as well as width amd height. This is NOT the case with Inline. */
+    display: inline-block;
+    margin-top: 25px;
+    border: 2px solid white;
+    padding: 10px 30px;
+    background-color: #4b5163;
+    /* A (AKA Anchor) elements/tags will NOT inherit a text color like other elements will. Must be applied directly */
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+#click:hover {
+    /* Changes the size of an element */
+    transform: scale(0.95);
+} 
+
